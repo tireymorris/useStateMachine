@@ -1,0 +1,32 @@
+{
+    "name": "useStateMachine",
+    "version": "1.0.0",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.esm.js",
+    "browser": "dist/index.umd.js",
+    "dependencies": {},
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^11.0.1",
+        "@rollup/plugin-node-resolve": "^7.0.0",
+        "@rollup/plugin-typescript": "^8.2.1",
+        "@types/jest": "^26.0.23",
+        "@types/ms": "^0.7.31",
+        "@types/react": "^17.0.11",
+        "jest": "^27.0.4",
+        "prettier": "^2.3.1",
+        "react": "^17.0.2",
+        "rollup": "^1.29.0",
+        "ts-jest": "^27.0.3",
+        "tslib": "^2.3.0",
+        "typescript": "^4.3.2"
+    },
+    "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -c -w",
+        "test": "jest test/**",
+        "pretest": "npm run build"
+    },
+    "files": [
+        "dist"
+    ]
+}
