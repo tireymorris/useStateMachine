@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import React, { useReducer } from 'react';
 
 export type StateMachineSpec<State extends string, Event extends string> = Record<State, Partial<Record<Event, State>>>;
 
@@ -22,7 +22,7 @@ export const createStateMachine = <State extends string, Event extends string>(s
 }
 
 
-export const useStateMachine = <State extends string, Event extends string>(spec: StateMachineSpec<State, Event>, initialState: State) => {
+export const useStateMachine = <State extends string, Event extends string>(spec: StateMachineSpec<State, Event>, initialState: State): [State, React.Dispatch<Event>] => {
 	const reducer = createStateMachine<State, Event>(spec);
 
 	return useReducer(reducer, initialState);
