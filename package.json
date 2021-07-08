@@ -1,5 +1,5 @@
 {
-    "name": "useStateMachine",
+    "name": "use-state-machine",
     "version": "1.0.0",
     "main": "dist/index.cjs.js",
     "module": "dist/index.esm.js",
@@ -26,7 +26,8 @@
         "build": "rollup -c",
         "dev": "rollup -c -w",
         "test": "jest test/**",
-        "pretest": "npm run build"
+        "pretest": "npm run build",
+        "lint": "npx prettier -c .prettierrc.yml -w ."
     },
     "files": [
         "dist"
